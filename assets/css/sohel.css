@@ -1,0 +1,203 @@
+*,
+*:before,
+*:after,
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+main {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+    background-color: blue;
+    color: white;
+}
+
+.navbar-toggler:active:focus {
+    box-shadow: none;
+}
+
+/* navbar menu responsive */
+
+@media (min-width: 992px) {
+    .offcanvas {
+        visibility: visible;
+        position: relative;
+        background: none;
+        border: none;
+        justify-content: end;
+        color: red;
+    }
+}
+
+@media (max-width: 992px) {
+    .offcanvas {
+        width: 90vw;
+        height: 100vh;
+    }
+
+    .offcanvas-start-lg {
+        top: 0;
+        left: 0;
+        border-right: 1px solid rgba(0, 0, 0, .2);
+        transform: translateX(-100%);
+    }
+}
+
+.loader {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    z-index: 9999;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.596);
+}
+
+.circle_loader {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50rem;
+    border: 5px solid red;
+    border-bottom: 5px solid transparent;
+    animation: sohel 1s linear infinite;
+}
+
+@keyframes sohel {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.noscroll {
+    overflow: hidden;
+}
+
+.scroll_header {
+    padding: 1rem 0 !important;
+}
+
+header {
+    transition: .3s;
+}
+
+
+/* navbar menu responsive END */
+
+.main_banner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* scrollbar style  START*/
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+
+
+/* scrollbar style END */
+
+
+/* dhow dropdown on hover START*/
+.dropdown-menu>li:hover>.submenu {
+    display: block;
+}
+
+@media (min-width:992px) {
+    .dropdown:hover>.dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    .dropdown-item:hover>.dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    .dropdown .dropdown-menu li {
+        position: relative;
+    }
+
+    .submenu {
+
+        left: 100%;
+        top: 0;
+
+    }
+}
+
+@media (max-width:992px) {
+    .mobile_dropdown_icon {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        height: 2rem;
+        width: 2rem;
+        background: var(--theme-sky-blue);
+        display: grid;
+        place-content: center;
+    }
+    .dropdown-toggle::after{
+        display: none;
+    }
+}
+
+
+/* dhow dropdown on hover END */
